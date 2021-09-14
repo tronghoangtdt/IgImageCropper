@@ -1,0 +1,6 @@
+module Pods_IGImageCropper_Example {
+  umbrella header "Pods-IGImageCropper_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

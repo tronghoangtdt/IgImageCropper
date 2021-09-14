@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IGImageCropper
 
 class ViewController: UIViewController {
 
@@ -20,5 +21,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showCropper(_ sender: Any) {
+        
+        let im = UIImage(named: "22_l",
+                         in: Bundle(for: type(of:self)),
+                         compatibleWith: nil)!
+        let myViewController = IGCropViewController(image: im, cropInfo: nil)
+        self.navigationController?.pushViewController(myViewController, animated: true)
+    }
 }
 

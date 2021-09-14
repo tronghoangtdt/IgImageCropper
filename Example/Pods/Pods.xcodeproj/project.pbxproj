@@ -1,0 +1,721 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001E82C3149444C81ED8E76973211429 /* IGImageCropper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D00B9A35BC58AE5FA033C4AB311F91DE /* IGImageCropper-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		11AD51181D17AF154AD5B606F6FD1F9C /* IGCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC72F3B401FF11E6B19DAD37691940D /* IGCropViewController.swift */; };
+		26C50D023FAE769E1E13262ECCD70D2F /* IGImageCropper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD50A96AE795508E5DD8F939D9DA4902 /* IGImageCropper-dummy.m */; };
+		33D859481209A2D38D898C90D4056F91 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A6C0F615F62E6A0F686E6AAF481FA /* ReplaceMe.swift */; };
+		3756AA136439AFD52D506E28EE7C7278 /* Pods-IGImageCropper_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D63C249222E9AFCC301CD564A998D0E3 /* Pods-IGImageCropper_Example-dummy.m */; };
+		396A04DD777FE1E81D466C97425498C0 /* Pods-IGImageCropper_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C1145FF8264DE0AB6485DEA20F33BAD /* Pods-IGImageCropper_Example-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C04A449C2123D9AE52F6F68B1C61AB21 /* Pods-IGImageCropper_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2A0E148538B1A18F294C75347E7718 /* Pods-IGImageCropper_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1F547B1A092DCAA4E8EEE2A65630C4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B14D28D382083E9541D8003C92E590A;
+			remoteInfo = "Pods-IGImageCropper_Example";
+		};
+		D0B560E0CFC6EA94FB7B528533909473 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F927EA27809C94F5C3CAFAC67AA04833;
+			remoteInfo = IGImageCropper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		085ADF529B97869D3C5EE243FC7D0D6E /* expand@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "expand@2x.png"; sourceTree = "<group>"; };
+		0B0D3A11F30F08CA3785CEAEFE7F7D1D /* shrink@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "shrink@3x.png"; sourceTree = "<group>"; };
+		2360E135188DA2A9B52D524C396DE7EE /* Pods-IGImageCropper_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IGImageCropper_Example.modulemap"; sourceTree = "<group>"; };
+		314246ACFA593E84190F428909A97F52 /* Pods-IGImageCropper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IGImageCropper_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		35AA81B870767E1B1EAB203A8B2BC5C0 /* IGCropViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = IGCropViewController.xib; sourceTree = "<group>"; };
+		38F9DC0DEAF54B28CD74AC8C609E4CCC /* Pods-IGImageCropper_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IGImageCropper_Example-resources.sh"; sourceTree = "<group>"; };
+		3EB483A28498170AD4F42242D68ECAB9 /* Pods-IGImageCropper_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IGImageCropper_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4211FF272420E1B30AC04063A2EA612B /* shrink.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = shrink.png; sourceTree = "<group>"; };
+		43B9F99F2113F17A831ECA627112F7E9 /* expand@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "expand@3x.png"; sourceTree = "<group>"; };
+		46883E7FD0D8AD456AC31442CA61F875 /* Pods-IGImageCropper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IGImageCropper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		493127A0E627C9F1A8E6513FC9537FC7 /* IGImageCropper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IGImageCropper-prefix.pch"; sourceTree = "<group>"; };
+		4E6EEE5D7AC7D8A576238B2CFAFEA559 /* Pods-IGImageCropper_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IGImageCropper_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		657156EA21484C4A14E646BB48F384C0 /* shrink@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "shrink@2x.png"; sourceTree = "<group>"; };
+		6A7A6C0F615F62E6A0F686E6AAF481FA /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = IGImageCropper/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		6B6E9D795586E0C2F3D7E17D69CD759D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6CF2E64AE3F7DA1B05F81BCC933A3EDB /* Pods-IGImageCropper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IGImageCropper_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		72503558D1D1310D3A36123624514A53 /* expand.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = expand.png; sourceTree = "<group>"; };
+		83BA55094D1F0E1F920C1085956C7535 /* IGImageCropper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IGImageCropper.release.xcconfig; sourceTree = "<group>"; };
+		90B19FFB9EA969E73DC63104645660DE /* libPods-IGImageCropper_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-IGImageCropper_Tests.a"; path = "libPods-IGImageCropper_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1145FF8264DE0AB6485DEA20F33BAD /* Pods-IGImageCropper_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IGImageCropper_Example-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4147DE929FF9AC8A892BF6F4C9B4882 /* IGImageCropper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = IGImageCropper.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AD50A96AE795508E5DD8F939D9DA4902 /* IGImageCropper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IGImageCropper-dummy.m"; sourceTree = "<group>"; };
+		AE2A0E148538B1A18F294C75347E7718 /* Pods-IGImageCropper_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IGImageCropper_Tests-dummy.m"; sourceTree = "<group>"; };
+		BDC72F3B401FF11E6B19DAD37691940D /* IGCropViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IGCropViewController.swift; path = IGImageCropper/Classes/IGCropViewController.swift; sourceTree = "<group>"; };
+		CF73F8649635ADC1E2F00B8C98C14239 /* Pods-IGImageCropper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IGImageCropper_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D00B9A35BC58AE5FA033C4AB311F91DE /* IGImageCropper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IGImageCropper-umbrella.h"; sourceTree = "<group>"; };
+		D27B9B625308AFA03C7678927E30C0A2 /* libPods-IGImageCropper_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-IGImageCropper_Example.a"; path = "libPods-IGImageCropper_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D63C249222E9AFCC301CD564A998D0E3 /* Pods-IGImageCropper_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IGImageCropper_Example-dummy.m"; sourceTree = "<group>"; };
+		E0CDC5F24551DF454233EA2C45E37E75 /* libIGImageCropper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libIGImageCropper.a; path = libIGImageCropper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7D82EB1F6A9CC7C2987E652F938AFC /* IGImageCropper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IGImageCropper.modulemap; sourceTree = "<group>"; };
+		EAA1B10880AC0E6CC922496F0797D415 /* IGImageCropper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IGImageCropper.debug.xcconfig; sourceTree = "<group>"; };
+		F3DE4621F02D022CE117FFE6F69D4A01 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F76C10AF23AFDDF3DC7EBF567F4A27EB /* Pods-IGImageCropper_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IGImageCropper_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FE30961336C7C1037DFA83B687EE5BC9 /* Pods-IGImageCropper_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IGImageCropper_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		198000D99310E61EDDE96C28D17EB996 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EB57B2A7F7B2B271DDF2CA069282DBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A427818EFA43DA26E868523E0ED367BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54D9869BB1CDCF5D84AE13FD0F863805 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB9EB992CC16D07ABBD8584B2ACEFA75 /* Pods-IGImageCropper_Example */,
+				718979F748D73EFF2A4680CFC78E181A /* Pods-IGImageCropper_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		70E0FF9D0A174D5B5568B72117C83778 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A4147DE929FF9AC8A892BF6F4C9B4882 /* IGImageCropper.podspec */,
+				6B6E9D795586E0C2F3D7E17D69CD759D /* LICENSE */,
+				F3DE4621F02D022CE117FFE6F69D4A01 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		718979F748D73EFF2A4680CFC78E181A /* Pods-IGImageCropper_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3EB483A28498170AD4F42242D68ECAB9 /* Pods-IGImageCropper_Tests-acknowledgements.markdown */,
+				4E6EEE5D7AC7D8A576238B2CFAFEA559 /* Pods-IGImageCropper_Tests-acknowledgements.plist */,
+				AE2A0E148538B1A18F294C75347E7718 /* Pods-IGImageCropper_Tests-dummy.m */,
+				46883E7FD0D8AD456AC31442CA61F875 /* Pods-IGImageCropper_Tests.debug.xcconfig */,
+				6CF2E64AE3F7DA1B05F81BCC933A3EDB /* Pods-IGImageCropper_Tests.release.xcconfig */,
+			);
+			name = "Pods-IGImageCropper_Tests";
+			path = "Target Support Files/Pods-IGImageCropper_Tests";
+			sourceTree = "<group>";
+		};
+		7F6F8D00C7CD39F5FF41FB58A7B957B2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA7D82EB1F6A9CC7C2987E652F938AFC /* IGImageCropper.modulemap */,
+				AD50A96AE795508E5DD8F939D9DA4902 /* IGImageCropper-dummy.m */,
+				493127A0E627C9F1A8E6513FC9537FC7 /* IGImageCropper-prefix.pch */,
+				D00B9A35BC58AE5FA033C4AB311F91DE /* IGImageCropper-umbrella.h */,
+				EAA1B10880AC0E6CC922496F0797D415 /* IGImageCropper.debug.xcconfig */,
+				83BA55094D1F0E1F920C1085956C7535 /* IGImageCropper.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/IGImageCropper";
+			sourceTree = "<group>";
+		};
+		8810F5DC8C2ABA039E9CED2E4C8B8551 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				72503558D1D1310D3A36123624514A53 /* expand.png */,
+				085ADF529B97869D3C5EE243FC7D0D6E /* expand@2x.png */,
+				43B9F99F2113F17A831ECA627112F7E9 /* expand@3x.png */,
+				4211FF272420E1B30AC04063A2EA612B /* shrink.png */,
+				657156EA21484C4A14E646BB48F384C0 /* shrink@2x.png */,
+				0B0D3A11F30F08CA3785CEAEFE7F7D1D /* shrink@3x.png */,
+			);
+			name = Assets;
+			path = IGImageCropper/Assets;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				E4E0D377B585B1A8F6E80E048AD3D848 /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				E7296EF352ED4ACB3310028F16EC11EE /* Products */,
+				54D9869BB1CDCF5D84AE13FD0F863805 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D46F5259968C043C8984DF8372C32429 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				35AA81B870767E1B1EAB203A8B2BC5C0 /* IGCropViewController.xib */,
+			);
+			name = Resources;
+			path = IGImageCropper/Resources;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4E0D377B585B1A8F6E80E048AD3D848 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9A56CA9951C778BF49121E5A73FBA9C /* IGImageCropper */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		E7296EF352ED4ACB3310028F16EC11EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0CDC5F24551DF454233EA2C45E37E75 /* libIGImageCropper.a */,
+				D27B9B625308AFA03C7678927E30C0A2 /* libPods-IGImageCropper_Example.a */,
+				90B19FFB9EA969E73DC63104645660DE /* libPods-IGImageCropper_Tests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9A56CA9951C778BF49121E5A73FBA9C /* IGImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				BDC72F3B401FF11E6B19DAD37691940D /* IGCropViewController.swift */,
+				6A7A6C0F615F62E6A0F686E6AAF481FA /* ReplaceMe.swift */,
+				8810F5DC8C2ABA039E9CED2E4C8B8551 /* Assets */,
+				70E0FF9D0A174D5B5568B72117C83778 /* Pod */,
+				D46F5259968C043C8984DF8372C32429 /* Resources */,
+				7F6F8D00C7CD39F5FF41FB58A7B957B2 /* Support Files */,
+			);
+			name = IGImageCropper;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		FB9EB992CC16D07ABBD8584B2ACEFA75 /* Pods-IGImageCropper_Example */ = {
+			isa = PBXGroup;
+			children = (
+				2360E135188DA2A9B52D524C396DE7EE /* Pods-IGImageCropper_Example.modulemap */,
+				F76C10AF23AFDDF3DC7EBF567F4A27EB /* Pods-IGImageCropper_Example-acknowledgements.markdown */,
+				FE30961336C7C1037DFA83B687EE5BC9 /* Pods-IGImageCropper_Example-acknowledgements.plist */,
+				D63C249222E9AFCC301CD564A998D0E3 /* Pods-IGImageCropper_Example-dummy.m */,
+				38F9DC0DEAF54B28CD74AC8C609E4CCC /* Pods-IGImageCropper_Example-resources.sh */,
+				9C1145FF8264DE0AB6485DEA20F33BAD /* Pods-IGImageCropper_Example-umbrella.h */,
+				314246ACFA593E84190F428909A97F52 /* Pods-IGImageCropper_Example.debug.xcconfig */,
+				CF73F8649635ADC1E2F00B8C98C14239 /* Pods-IGImageCropper_Example.release.xcconfig */,
+			);
+			name = "Pods-IGImageCropper_Example";
+			path = "Target Support Files/Pods-IGImageCropper_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3E69552225CACD253781F51E1F43BE2B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A53E5825B87D07ECB45B796E61857BCB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				001E82C3149444C81ED8E76973211429 /* IGImageCropper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2246BBBAA5BFCFA6B95EC25EFD6E2FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				396A04DD777FE1E81D466C97425498C0 /* Pods-IGImageCropper_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9B14D28D382083E9541D8003C92E590A /* Pods-IGImageCropper_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7BEF2C2734A81C053B6178FBE45E6DD /* Build configuration list for PBXNativeTarget "Pods-IGImageCropper_Example" */;
+			buildPhases = (
+				C2246BBBAA5BFCFA6B95EC25EFD6E2FB /* Headers */,
+				1A513583C93801574596B81918651285 /* Sources */,
+				A427818EFA43DA26E868523E0ED367BE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FE6588635380B56DF0907B9B6ECCA0E /* PBXTargetDependency */,
+			);
+			name = "Pods-IGImageCropper_Example";
+			productName = "Pods-IGImageCropper_Example";
+			productReference = D27B9B625308AFA03C7678927E30C0A2 /* libPods-IGImageCropper_Example.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D31B34DA6F223C3E944FBACB00A16D18 /* Pods-IGImageCropper_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B7CB480D4D62DA8AF6D5DDA442F3FB9 /* Build configuration list for PBXNativeTarget "Pods-IGImageCropper_Tests" */;
+			buildPhases = (
+				3E69552225CACD253781F51E1F43BE2B /* Headers */,
+				247AD7D6FC6F1CE72D95EBB36A71D78E /* Sources */,
+				2EB57B2A7F7B2B271DDF2CA069282DBE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47915934875E730F6827702B14A7EF28 /* PBXTargetDependency */,
+			);
+			name = "Pods-IGImageCropper_Tests";
+			productName = "Pods-IGImageCropper_Tests";
+			productReference = 90B19FFB9EA969E73DC63104645660DE /* libPods-IGImageCropper_Tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F927EA27809C94F5C3CAFAC67AA04833 /* IGImageCropper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CB4B4CF8AD8AAB63B1D394EF90877AC /* Build configuration list for PBXNativeTarget "IGImageCropper" */;
+			buildPhases = (
+				A53E5825B87D07ECB45B796E61857BCB /* Headers */,
+				0C808F79E99AA2144447D743435B824B /* Sources */,
+				198000D99310E61EDDE96C28D17EB996 /* Frameworks */,
+				3DA4AA2746E0834F1750BE1440D52909 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IGImageCropper;
+			productName = IGImageCropper;
+			productReference = E0CDC5F24551DF454233EA2C45E37E75 /* libIGImageCropper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = E7296EF352ED4ACB3310028F16EC11EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F927EA27809C94F5C3CAFAC67AA04833 /* IGImageCropper */,
+				9B14D28D382083E9541D8003C92E590A /* Pods-IGImageCropper_Example */,
+				D31B34DA6F223C3E944FBACB00A16D18 /* Pods-IGImageCropper_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DA4AA2746E0834F1750BE1440D52909 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/IGImageCropper/IGImageCropper.modulemap",
+				"${PODS_ROOT}/Headers/Public/IGImageCropper/IGImageCropper-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/IGImageCropper-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/IGImageCropper/IGImageCropper.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/IGImageCropper/IGImageCropper-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C808F79E99AA2144447D743435B824B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AD51181D17AF154AD5B606F6FD1F9C /* IGCropViewController.swift in Sources */,
+				26C50D023FAE769E1E13262ECCD70D2F /* IGImageCropper-dummy.m in Sources */,
+				33D859481209A2D38D898C90D4056F91 /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A513583C93801574596B81918651285 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3756AA136439AFD52D506E28EE7C7278 /* Pods-IGImageCropper_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247AD7D6FC6F1CE72D95EBB36A71D78E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04A449C2123D9AE52F6F68B1C61AB21 /* Pods-IGImageCropper_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47915934875E730F6827702B14A7EF28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-IGImageCropper_Example";
+			target = 9B14D28D382083E9541D8003C92E590A /* Pods-IGImageCropper_Example */;
+			targetProxy = B1F547B1A092DCAA4E8EEE2A65630C4B /* PBXContainerItemProxy */;
+		};
+		5FE6588635380B56DF0907B9B6ECCA0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IGImageCropper;
+			target = F927EA27809C94F5C3CAFAC67AA04833 /* IGImageCropper */;
+			targetProxy = D0B560E0CFC6EA94FB7B528533909473 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		36E8A7572E2502B3FBC8510B668A2DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 314246ACFA593E84190F428909A97F52 /* Pods-IGImageCropper_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-IGImageCropper_Example/Pods-IGImageCropper_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38D80A0D1AD1C9D877163822A5022204 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83BA55094D1F0E1F920C1085956C7535 /* IGImageCropper.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/IGImageCropper/IGImageCropper-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/IGImageCropper/IGImageCropper.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = IGImageCropper;
+				PRODUCT_NAME = IGImageCropper;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42465DA8C7D87FC303C62F7868AB633B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF73F8649635ADC1E2F00B8C98C14239 /* Pods-IGImageCropper_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-IGImageCropper_Example/Pods-IGImageCropper_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77097120715ADC52463234586D137BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAA1B10880AC0E6CC922496F0797D415 /* IGImageCropper.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/IGImageCropper/IGImageCropper-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/IGImageCropper/IGImageCropper.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = IGImageCropper;
+				PRODUCT_NAME = IGImageCropper;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F8733F177A2CA3E5CBEAA4A986385B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46883E7FD0D8AD456AC31442CA61F875 /* Pods-IGImageCropper_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		FF08B48C6A6CB6F2B040595D193D7BEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CF2E64AE3F7DA1B05F81BCC933A3EDB /* Pods-IGImageCropper_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B7CB480D4D62DA8AF6D5DDA442F3FB9 /* Build configuration list for PBXNativeTarget "Pods-IGImageCropper_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F8733F177A2CA3E5CBEAA4A986385B4 /* Debug */,
+				FF08B48C6A6CB6F2B040595D193D7BEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CB4B4CF8AD8AAB63B1D394EF90877AC /* Build configuration list for PBXNativeTarget "IGImageCropper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77097120715ADC52463234586D137BD4 /* Debug */,
+				38D80A0D1AD1C9D877163822A5022204 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7BEF2C2734A81C053B6178FBE45E6DD /* Build configuration list for PBXNativeTarget "Pods-IGImageCropper_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36E8A7572E2502B3FBC8510B668A2DD2 /* Debug */,
+				42465DA8C7D87FC303C62F7868AB633B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

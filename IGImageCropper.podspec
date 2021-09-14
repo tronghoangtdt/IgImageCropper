@@ -31,10 +31,8 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'IGImageCropper/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'IGImageCropper' => ['IGImageCropper/Assets/*.png']
-  # }
+  s.resources = ['IGImageCropper/Resources/*.xib', 'IGImageCropper/Assets/*.png']
+   
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
