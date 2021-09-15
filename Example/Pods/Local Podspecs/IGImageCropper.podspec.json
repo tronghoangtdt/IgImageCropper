@@ -2,8 +2,9 @@
   "name": "IGImageCropper",
   "version": "0.1.0",
   "summary": "A short description of IGImageCropper.",
+  "swift_versions": "4.2",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Arshad/IGImageCropper",
+  "homepage": "https://github.com/SL8-Pte-Ltd/IgImageCropper.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +13,7 @@
     "Arshad": "arshad.tp@ourslate.com"
   },
   "source": {
-    "git": "https://github.com/Arshad/IGImageCropper.git",
+    "git": "git@github.com:SL8-Pte-Ltd/IgImageCropper.git",
     "tag": "0.1.0"
   },
   "platforms": {
@@ -22,5 +23,6 @@
   "resources": [
     "IGImageCropper/Resources/*.xib",
     "IGImageCropper/Assets/*.png"
-  ]
+  ],
+  "swift_version": "4.2"
 }

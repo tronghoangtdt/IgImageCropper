@@ -1,6 +1,0 @@
-framework module Pods_IGImageCropper_Tests {
-  umbrella header "Pods-IGImageCropper_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
