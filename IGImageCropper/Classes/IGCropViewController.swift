@@ -136,24 +136,24 @@ public class IGCropViewController: UIViewController {
         
         print("scroll view ==" , scrollView.frame.size)
         print("result image size === ", croppedImage.size)
-        saveImage(image: croppedImage)
+//        saveImage(image: croppedImage)
     }
-    func saveImage(image: UIImage) -> Bool {
-        guard let data = image.jpegData(compressionQuality: 1) ?? image.pngData() else {
-            return false
-        }
-        guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL else {
-            return false
-        }
-        do {
-            try data.write(to: directory.appendingPathComponent("fileName.png")!)
-            print("path == ", directory.path)
-            return true
-        } catch {
-            print(error.localizedDescription)
-            return false
-        }
-    }
+//    func saveImage(image: UIImage) -> Bool {
+//        guard let data = image.UIImageJPEGRepresentation(compressionQuality: 1) ?? image.pngData() else {
+//            return false
+//        }
+//        guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL else {
+//            return false
+//        }
+//        do {
+//            try data.write(to: directory.appendingPathComponent("fileName.png")!)
+//            print("path == ", directory.path)
+//            return true
+//        } catch {
+//            print(error.localizedDescription)
+//            return false
+//        }
+//    }
     
     private  func animateMaskView(alpha: CGFloat) {
         UIView.animate(withDuration: 1.5) { [weak self] in
