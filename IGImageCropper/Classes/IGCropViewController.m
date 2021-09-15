@@ -26,10 +26,13 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
 @property (nonatomic) CGFloat minimumPortraitZoomScale;
 @property (nonatomic) CGFloat minimumLandScapeZoomScale;
 @property (nonatomic, strong) UIImage *image;
+@property (weak, nonatomic) IBOutlet UIView *scrollViewContainer;
 @property (unsafe_unretained, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (unsafe_unretained, nonatomic) IBOutlet UIButton *adjustZoomScaleButton;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *cropMask;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *chooseButton;
 @property (unsafe_unretained, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeightConstraint;
 @property (unsafe_unretained, nonatomic) IBOutlet NSLayoutConstraint *imageViewWidthConstraint;
 
@@ -54,10 +57,7 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
 #pragma mark - Life Cycle Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [_adjustZoomScaleButton setImage:[UIImage bundledImageNamed:@"shrink" bundleId:FrameworkBundleId] forState:UIControlStateNormal];
-    [_adjustZoomScaleButton setImage:[UIImage bundledImageNamed:@"expand" bundleId:FrameworkBundleId] forState:UIControlStateNormal];
-
+    [self configureView];
     [self setImageToCrop];
 }
 
@@ -75,7 +75,7 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
     return  _minimumLandScapeZoomScale;
 }
 
-- (void) cropImage {
+- (UIImage *) cropImage {
     
     CGFloat zoomScale = _scrollView.zoomScale;
     CGFloat scale = 1/zoomScale * 1/initialScale;
@@ -89,8 +89,8 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
     CGImageRef imageRef = CGImageCreateWithImageInRect(_imageView.image.CGImage, CGRectMake(x, y, width, height));
     
     UIImage *croppedImage = [[UIImage alloc] initWithCGImage:imageRef];
-    _imageView.image = croppedImage;
 
+    return croppedImage;
 }
 
 - (void) animateMaskViewToAlpha: (CGFloat) alpha {
@@ -104,6 +104,20 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
 }
 
 #pragma mark - Configs
+- (void) configureView {
+    
+    [_adjustZoomScaleButton setImage:[UIImage bundledImageNamed:@"shrink" bundleId:FrameworkBundleId] forState:UIControlStateNormal];
+    [_adjustZoomScaleButton setImage:[UIImage bundledImageNamed:@"expand" bundleId:FrameworkBundleId] forState:UIControlStateNormal];
+    if (_chooseButtonTitle != NULL) {
+        [_chooseButton setTitle:_chooseButtonTitle];
+    }
+    if (_cancelButtonTitle != NULL) {
+        [_cancelButton setTitle:_cancelButtonTitle];
+    }
+    
+//    _scrollViewContainer.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor colorWithRed:128/255 green:128/255 blue:128/255 alpha:1]);
+//    _scrollViewContainer.layer.borderWidth = 10.0;
+}
 
 - (void) setImageToCrop {
     
@@ -161,9 +175,13 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
 }
 
 - (IBAction)cancelAction:(id)sender {
+    
+    [self.delegate cropViewController:self didFinishCancelled:YES];
 }
 - (IBAction)chooseButtonAction:(id)sender {
-    [self cropImage];
+    
+   UIImage *croppedImage = [self cropImage];
+    [self.delegate cropViewController:self didCropToImage:croppedImage withRect:CGRectMake(0, 0, croppedImage.size.width, croppedImage.size.height)];
 }
 
 
