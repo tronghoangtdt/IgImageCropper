@@ -7,13 +7,13 @@
 
 import UIKit
 
-public class CropInfo: NSObject {
+@objc public class CropInfo: NSObject {
     let minimumPortraitZoomScale: CGFloat = 4/5
     let minimumLandScapeZoomScale: CGFloat = 1/1.91
 }
 
 let frameworkBundleID =  "org.cocoapods.IGImageCropper"
-public class IGCropViewController: UIViewController {
+@objc public class IGCropViewController: UIViewController {
     
     enum ZoomScale {
         case minimum
@@ -44,7 +44,7 @@ public class IGCropViewController: UIViewController {
         return cropInfo.minimumLandScapeZoomScale
     }
     
-    public init(image: UIImage, cropInfo: CropInfo?) {
+    @objc public init(image: UIImage, cropInfo: CropInfo?) {
         if let cropInfo = cropInfo {
             self.cropInfo = cropInfo
         } else {
