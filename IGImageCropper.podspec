@@ -8,9 +8,10 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IGImageCropper'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of IGImageCropper.'
-  s.swift_version = '4.2'
+#  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
+
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
@@ -32,7 +33,10 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'IGImageCropper/Classes/**/*'
   s.resources = ['IGImageCropper/Resources/*.xib', 'IGImageCropper/Assets/*.png']
-   
+
+  # s.resource_bundles = {
+  #   'IGImageCropper' => ['IGImageCropper/Assets/*.png']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

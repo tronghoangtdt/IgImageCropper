@@ -1,4 +1,4 @@
-module IGImageCropper {
+framework module IGImageCropper {
   umbrella header "IGImageCropper-umbrella.h"
 
   export *

@@ -10,9 +10,7 @@
 #endif
 #endif
 
-#import "IGCropViewController.h"
-#import "UIImage+ImageLoad.h"
 
-FOUNDATION_EXPORT double IGImageCropperVersionNumber;
-FOUNDATION_EXPORT const unsigned char IGImageCropperVersionString[];
+FOUNDATION_EXPORT double Pods_IGImageCropper_TestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_IGImageCropper_TestsVersionString[];
 

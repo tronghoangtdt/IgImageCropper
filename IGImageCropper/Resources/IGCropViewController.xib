@@ -10,14 +10,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IGCropViewController" customModule="Cropper" customModuleProvider="target">
             <connections>
-                <outlet property="adjustZoomScaleButton" destination="6l7-iY-T7c" id="C2s-nT-D4T"/>
-                <outlet property="imageView" destination="irf-pf-5a7" id="MgW-Rs-5mc"/>
-                <outlet property="imageViewHeightContraint" destination="fOd-io-mL8" id="di6-An-UpA"/>
-                <outlet property="imageViewWidthConstraint" destination="j13-J8-r4K" id="fg2-pR-N1A"/>
-                <outlet property="scrollView" destination="kJB-ku-cRG" id="vQf-WP-9iF"/>
+                <outlet property="adjustZoomScaleButton" destination="6l7-iY-T7c" id="9ew-dz-vpO"/>
+                <outlet property="imageView" destination="irf-pf-5a7" id="pm6-Bg-Nkj"/>
+                <outlet property="imageViewHeightConstraint" destination="fOd-io-mL8" id="iXf-22-zn5"/>
+                <outlet property="imageViewWidthConstraint" destination="j13-J8-r4K" id="csP-cx-SQw"/>
+                <outlet property="scrollView" destination="kJB-ku-cRG" id="KN7-c0-pdz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outletCollection property="cropMask" destination="GSF-CL-e5g" collectionClass="NSMutableArray" id="Snt-cu-r8B"/>
-                <outletCollection property="cropMask" destination="F2i-Pf-4YI" collectionClass="NSMutableArray" id="QKv-NY-Erj"/>
+                <outletCollection property="cropMask" destination="GSF-CL-e5g" id="1zK-74-BTH"/>
+                <outletCollection property="cropMask" destination="F2i-Pf-4YI" id="P0c-Pd-Vhp"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -53,7 +53,7 @@
                             <state key="normal" image="shrink"/>
                             <state key="selected" image="expand"/>
                             <connections>
-                                <action selector="adjustZoomScaleAction:" destination="-1" eventType="touchUpInside" id="6xs-jV-waY"/>
+                                <action selector="adjustZoomScaleAction:" destination="-1" eventType="touchUpInside" id="u3j-9H-4Mi"/>
                             </connections>
                         </button>
                     </subviews>
@@ -83,14 +83,14 @@
                         <barButtonItem title="Cancel" id="8ru-3C-RZF">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="cancelAction:" destination="-1" id="RFV-fM-qFi"/>
+                                <action selector="cancelAction:" destination="-1" id="Sdk-Qd-smi"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="JxZ-Ge-7HZ"/>
                         <barButtonItem title="Choose" id="i9D-Yi-39V">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="chooseButtonAction:" destination="-1" id="JD2-b3-Jhe"/>
+                                <action selector="chooseButtonAction:" destination="-1" id="Jsy-Pv-Qjk"/>
                             </connections>
                         </barButtonItem>
                     </items>

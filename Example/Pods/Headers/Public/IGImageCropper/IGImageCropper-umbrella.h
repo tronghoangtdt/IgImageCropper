@@ -1,1 +1,0 @@
-../../../Target Support Files/IGImageCropper/IGImageCropper-umbrella.h
