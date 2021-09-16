@@ -24,7 +24,7 @@
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     UIImage * im = [UIImage imageNamed:@"22_l"];
-    IGCropViewController *vc = [[IGCropViewController alloc] initWithImage:im minimumPortraitZoomScale:4/5 minimumLandScapeZoomScale:1/1.91];
+    IGCropViewController *vc = [[IGCropViewController alloc] initWithImage:im minimumPortraitWidth:277 minimumLandScapeHeight:197];
     [self presentViewController:vc animated:YES completion:^{
             
     }];

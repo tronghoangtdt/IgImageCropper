@@ -23,8 +23,8 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
 
 }
 
-@property (nonatomic) CGFloat minimumPortraitZoomScale;
-@property (nonatomic) CGFloat minimumLandScapeZoomScale;
+@property (nonatomic) CGFloat minimumPortraitWidth;
+@property (nonatomic) CGFloat minimumLandScapeHeight;
 @property (nonatomic, strong) UIImage *image;
 @property (weak, nonatomic) IBOutlet UIView *scrollViewContainer;
 @property (unsafe_unretained, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -41,10 +41,10 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
 @implementation IGCropViewController
 
 
-- (instancetype) initWithImage: (UIImage *) image minimumPortraitZoomScale: (CGFloat) minimumPortraitZoomScale minimumLandScapeZoomScale: (CGFloat) minimumLandScapeZoomScale  {
+- (instancetype) initWithImage: (UIImage *) image minimumPortraitWidth: (CGFloat) minimumPortraitWidth minimumLandScapeHeight: (CGFloat) minimumLandScapeHeight  {
     
-    self.minimumLandScapeZoomScale = minimumLandScapeZoomScale;
-    self.minimumPortraitZoomScale = minimumPortraitZoomScale;
+    self.minimumPortraitWidth = minimumPortraitWidth;
+    self.minimumLandScapeHeight = minimumLandScapeHeight;
     self.image = image;
     initialScale = 1.0;
     activeZoomScale = ZoomScaleSquare;
@@ -70,9 +70,20 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
 
 - (CGFloat) minZoomScale {
     if ([self isPortraitImage]) {
-        return _minimumPortraitZoomScale;
+        CGFloat minHeight = UIScreen.mainScreen.bounds.size.width;
+        CGFloat minWidth = (_image.size.width/_image.size.height) * minHeight;
+        
+        minWidth = minWidth < _minimumPortraitWidth ? _minimumPortraitWidth : minWidth;
+
+        return minWidth/minHeight;
     }
-    return  _minimumLandScapeZoomScale;
+
+    CGFloat minWidth = UIScreen.mainScreen.bounds.size.width;
+    CGFloat minHeight = (_image.size.height/_image.size.width) * minWidth;
+    
+    minHeight = minHeight < _minimumLandScapeHeight ? _minimumLandScapeHeight : minHeight;
+
+    return minHeight/minWidth;
 }
 
 - (UIImage *) cropImage {
@@ -115,8 +126,6 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
         [_cancelButton setTitle:_cancelButtonTitle];
     }
     
-//    _scrollViewContainer.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor colorWithRed:128/255 green:128/255 blue:128/255 alpha:1]);
-//    _scrollViewContainer.layer.borderWidth = 10.0;
 }
 
 - (void) setImageToCrop {
@@ -124,6 +133,7 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
     _imageView.image = _image;
     
     if ([self isPortraitImage]) {
+        NSLog(@"isPortraitImage");
         // For portait image make width maximum as screen width and adjust the height accordingly
         CGFloat width = UIScreen.mainScreen.bounds.size.width;
         initialScale = width/_image.size.width;
@@ -131,7 +141,8 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
         _imageViewWidthConstraint.constant = width;
         _imageViewHeightConstraint.constant = _image.size.height * initialScale;
     } else {
-        
+        NSLog(@"Landscape");
+
         // For portait image make height maximum as screen width and adjust the width accordingly
         CGFloat height = UIScreen.mainScreen.bounds.size.width; // first showing in square crop where width = screen width
         initialScale = height/_image.size.height;
@@ -194,16 +205,23 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
     
-    if ([self isPortraitImage]) {
-        
-        CGFloat h =  (UIScreen.mainScreen.bounds.size.width - _imageView.frame.size.width) / 2;
-        _scrollView.contentInset = UIEdgeInsetsMake(0, h < 0 ? 0 : h, 0, 0);
-    } else {
-        
-        CGFloat v =  (UIScreen.mainScreen.bounds.size.width - _imageView.frame.size.height) / 2;
-        _scrollView.contentInset = UIEdgeInsetsMake(v < 0 ? 0 : v, 0, 0, 0);
+//    if ([self isPortraitImage]) {
+//
+//        CGFloat h =  (UIScreen.mainScreen.bounds.size.width - _imageView.frame.size.width) / 2;
+//        _scrollView.contentInset = UIEdgeInsetsMake(0, h < 0 ? 0 : h, 0, 0);
+//    } else {
+//
+//        CGFloat v =  (UIScreen.mainScreen.bounds.size.width - _imageView.frame.size.height) / 2;
+//        _scrollView.contentInset = UIEdgeInsetsMake(v < 0 ? 0 : v, 0, 0, 0);
+//
+//    }
+    
+    CGFloat h =  (UIScreen.mainScreen.bounds.size.width - _imageView.frame.size.width) / 2;
+    CGFloat v =  (UIScreen.mainScreen.bounds.size.width - _imageView.frame.size.height) / 2;
+    _scrollView.contentInset = UIEdgeInsetsMake(v < 0 ? 0 : v, h < 0 ? 0 : h, 0, 0);
 
-    }
+
+
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {

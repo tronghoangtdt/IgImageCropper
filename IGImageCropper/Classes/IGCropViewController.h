@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, weak) id<IGCropViewControllerDelegate> delegate;
 
 
-- (instancetype) initWithImage: (UIImage *) image minimumPortraitZoomScale: (CGFloat) minimumPortraitZoomScale minimumLandScapeZoomScale: (CGFloat) minimumLandScapeZoomScale;
+- (instancetype) initWithImage: (UIImage *) image minimumPortraitWidth: (CGFloat) minimumPortraitWidth minimumLandScapeHeight: (CGFloat) minimumLandScapeHeight;
 @end
 
 

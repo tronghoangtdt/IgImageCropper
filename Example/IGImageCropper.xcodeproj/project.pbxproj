@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5390EF3426F3085C00922398 /* small_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 5390EF3326F3085B00922398 /* small_p.png */; };
+		5390EF3926F3089200922398 /* 22_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 5390EF3726F3089200922398 /* 22_p.png */; };
+		5390EF3A26F3089200922398 /* small_l.png in Resources */ = {isa = PBXBuildFile; fileRef = 5390EF3826F3089200922398 /* small_l.png */; };
 		53B3E8CE26F22A1400563BDE /* 22_l.png in Resources */ = {isa = PBXBuildFile; fileRef = 53B3E8CD26F22A1400563BDE /* 22_l.png */; };
 		5875F8D35DB80792F15A105A /* Pods_IGImageCropper_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB66EC0559BB65C3A13D69F /* Pods_IGImageCropper_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -40,6 +43,9 @@
 /* Begin PBXFileReference section */
 		03C2E76984C9558B2F507D90 /* IGImageCropper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IGImageCropper.podspec; path = ../IGImageCropper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1F2AE2E4D9E9AFF80AEAE0D3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5390EF3326F3085B00922398 /* small_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_p.png; sourceTree = "<group>"; };
+		5390EF3726F3089200922398 /* 22_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22_p.png; sourceTree = "<group>"; };
+		5390EF3826F3089200922398 /* small_l.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_l.png; sourceTree = "<group>"; };
 		53B3E8CD26F22A1400563BDE /* 22_l.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 22_l.png; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* IGImageCropper_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGImageCropper_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -134,6 +140,9 @@
 		6003F593195388D20070C39A /* Example for IGImageCropper */ = {
 			isa = PBXGroup;
 			children = (
+				5390EF3726F3089200922398 /* 22_p.png */,
+				5390EF3826F3089200922398 /* small_l.png */,
+				5390EF3326F3085B00922398 /* small_p.png */,
 				53B3E8CD26F22A1400563BDE /* 22_l.png */,
 				6003F59C195388D20070C39A /* IGAppDelegate.h */,
 				6003F59D195388D20070C39A /* IGAppDelegate.m */,
@@ -280,7 +289,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5390EF3426F3085C00922398 /* small_p.png in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				5390EF3A26F3089200922398 /* small_l.png in Resources */,
+				5390EF3926F3089200922398 /* 22_p.png in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				53B3E8CE26F22A1400563BDE /* 22_l.png in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
