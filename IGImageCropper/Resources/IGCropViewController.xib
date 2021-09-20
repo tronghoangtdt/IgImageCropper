@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IGCropViewController" customModule="IGImageCropper" customModuleProvider="target">
             <connections>
                 <outlet property="adjustZoomScaleButton" destination="6l7-iY-T7c" id="9ew-dz-vpO"/>
+                <outlet property="borderView" destination="aqd-zu-0aT" id="shg-f2-rlj"/>
                 <outlet property="cancelButton" destination="8ru-3C-RZF" id="FkJ-FM-zYo"/>
                 <outlet property="chooseButton" destination="i9D-Yi-39V" id="zOE-pq-uGF"/>
                 <outlet property="imageView" destination="irf-pf-5a7" id="pm6-Bg-Nkj"/>
@@ -32,7 +33,7 @@
                     <rect key="frame" x="0.0" y="241" width="414" height="414"/>
                     <subviews>
                         <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJB-ku-cRG">
-                            <rect key="frame" x="1" y="1" width="412" height="412"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="irf-pf-5a7">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
@@ -59,16 +60,24 @@
                                 <action selector="adjustZoomScaleAction:" destination="-1" eventType="touchUpInside" id="u3j-9H-4Mi"/>
                             </connections>
                         </button>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqd-zu-0aT">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="aqd-zu-0aT" firstAttribute="top" secondItem="vnA-nH-zSU" secondAttribute="top" id="4wV-Hs-Vse"/>
                         <constraint firstItem="6l7-iY-T7c" firstAttribute="leading" secondItem="vnA-nH-zSU" secondAttribute="leading" constant="24" id="7PP-Ue-aHL"/>
-                        <constraint firstAttribute="trailing" secondItem="kJB-ku-cRG" secondAttribute="trailing" constant="1" id="Dlo-o3-MpE"/>
+                        <constraint firstAttribute="trailing" secondItem="kJB-ku-cRG" secondAttribute="trailing" id="Dlo-o3-MpE"/>
+                        <constraint firstAttribute="bottom" secondItem="aqd-zu-0aT" secondAttribute="bottom" id="ElB-uz-b7B"/>
                         <constraint firstAttribute="bottom" secondItem="6l7-iY-T7c" secondAttribute="bottom" constant="24" id="OsR-sH-nma"/>
                         <constraint firstAttribute="width" secondItem="vnA-nH-zSU" secondAttribute="height" multiplier="1:1" id="dou-Tl-wUo"/>
-                        <constraint firstItem="kJB-ku-cRG" firstAttribute="top" secondItem="vnA-nH-zSU" secondAttribute="top" constant="1" id="hbM-6a-3P8"/>
-                        <constraint firstAttribute="bottom" secondItem="kJB-ku-cRG" secondAttribute="bottom" constant="1" id="kBf-Rj-EOp"/>
-                        <constraint firstItem="kJB-ku-cRG" firstAttribute="leading" secondItem="vnA-nH-zSU" secondAttribute="leading" constant="1" id="oYV-rk-fNa"/>
+                        <constraint firstItem="kJB-ku-cRG" firstAttribute="top" secondItem="vnA-nH-zSU" secondAttribute="top" id="hbM-6a-3P8"/>
+                        <constraint firstAttribute="bottom" secondItem="kJB-ku-cRG" secondAttribute="bottom" id="kBf-Rj-EOp"/>
+                        <constraint firstItem="aqd-zu-0aT" firstAttribute="leading" secondItem="vnA-nH-zSU" secondAttribute="leading" id="mkU-oB-bzN"/>
+                        <constraint firstItem="kJB-ku-cRG" firstAttribute="leading" secondItem="vnA-nH-zSU" secondAttribute="leading" id="oYV-rk-fNa"/>
+                        <constraint firstAttribute="trailing" secondItem="aqd-zu-0aT" secondAttribute="trailing" id="wtd-XM-eS1"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSF-CL-e5g">

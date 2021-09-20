@@ -23,7 +23,7 @@
 
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    UIImage * im = [UIImage imageNamed:@"22_l"];
+    UIImage * im = [UIImage imageNamed:@"small_p"];
     IGCropViewController *vc = [[IGCropViewController alloc] initWithImage:im minimumPortraitWidth:277 minimumLandScapeHeight:197];
     [self presentViewController:vc animated:YES completion:^{
             

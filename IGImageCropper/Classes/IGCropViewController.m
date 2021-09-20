@@ -35,6 +35,7 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *chooseButton;
 @property (unsafe_unretained, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeightConstraint;
 @property (unsafe_unretained, nonatomic) IBOutlet NSLayoutConstraint *imageViewWidthConstraint;
+@property (weak, nonatomic) IBOutlet UIView *borderView;
 
 @end
 
@@ -125,7 +126,9 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
     if (_cancelButtonTitle != NULL) {
         [_cancelButton setTitle:_cancelButtonTitle];
     }
-    
+
+    _borderView.layer.borderColor = [UIColor colorWithRed:128.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:1].CGColor;
+    _borderView.layer.borderWidth = 1;
 }
 
 - (void) setImageToCrop {
