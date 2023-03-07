@@ -21,6 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *_Nullable chooseButtonTitle;
 @property (nonatomic, strong) NSString *_Nullable cancelButtonTitle;
+@property (nonatomic, strong) UIColor *_Nullable chooseButtonColor;
+@property (nonatomic, strong) UIColor *_Nullable cancelButtonColor;
+@property (nonatomic) BOOL  isGif;
+
+@property (nonatomic, strong) NSString *_Nullable sourcURL;
+
 @property (nullable, nonatomic, weak) id<IGCropViewControllerDelegate> delegate;
 
 

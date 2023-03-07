@@ -120,12 +120,27 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
     
     [_adjustZoomScaleButton setImage:[UIImage bundledImageNamed:@"shrink" bundleId:FrameworkBundleId] forState:UIControlStateNormal];
     [_adjustZoomScaleButton setImage:[UIImage bundledImageNamed:@"expand" bundleId:FrameworkBundleId] forState:UIControlStateNormal];
+    if(_isGif) {
+        [_adjustZoomScaleButton setHidden:YES];
+        _borderView.hidden = YES;
+    }
     if (_chooseButtonTitle != NULL) {
         [_chooseButton setTitle:_chooseButtonTitle];
     }
     if (_cancelButtonTitle != NULL) {
         [_cancelButton setTitle:_cancelButtonTitle];
     }
+    
+    if (_chooseButtonColor != NULL) {
+        [_chooseButton setTintColor:_chooseButtonColor];
+    }
+    if (_cancelButtonColor != NULL) {
+        [_cancelButton setTintColor:_cancelButtonColor];
+    }
+    if (_cancelButtonTitle != NULL) {
+        [_cancelButton setTitle:_cancelButtonTitle];
+    }
+    
 
     _borderView.layer.borderColor = [UIColor colorWithRed:128.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:1].CGColor;
     _borderView.layer.borderWidth = 1;
@@ -133,32 +148,40 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
 
 - (void) setImageToCrop {
     
-    _imageView.image = _image;
-    
-    if ([self isPortraitImage]) {
-        NSLog(@"isPortraitImage");
-        // For portait image make width maximum as screen width and adjust the height accordingly
-        CGFloat width = UIScreen.mainScreen.bounds.size.width;
-        initialScale = width/_image.size.width;
+    if (_isGif) {
+        UIImage* mygif = [UIImage animatedImageWithAnimatedGIFURL:[NSURL URLWithString:_sourcURL]];
+        _imageView.image = mygif;
+        _scrollView.minimumZoomScale = [self minZoomScale];
+        _scrollView.maximumZoomScale = 5.0;
+        _scrollView.contentSize = _imageView.frame.size;
+        _scrollView.delegate = self;
 
-        _imageViewWidthConstraint.constant = width;
-        _imageViewHeightConstraint.constant = _image.size.height * initialScale;
     } else {
-        NSLog(@"Landscape");
+        _imageView.image = _image;
+        if ([self isPortraitImage]) {
+            // For portait image make width maximum as screen width and adjust the height accordingly
+            CGFloat width = UIScreen.mainScreen.bounds.size.width;
+            initialScale = width/_image.size.width;
 
-        // For portait image make height maximum as screen width and adjust the width accordingly
-        CGFloat height = UIScreen.mainScreen.bounds.size.width; // first showing in square crop where width = screen width
-        initialScale = height/_image.size.height;
-        
-        _imageViewWidthConstraint.constant = _image.size.width * initialScale;
-        _imageViewHeightConstraint.constant = height;
-        
+            _imageViewWidthConstraint.constant = width;
+            _imageViewHeightConstraint.constant = _image.size.height * initialScale;
+        } else {
+            // For portait image make height maximum as screen width and adjust the width accordingly
+            CGFloat height = UIScreen.mainScreen.bounds.size.width; // first showing in square crop where width = screen width
+            initialScale = height/_image.size.height;
+            
+            _imageViewWidthConstraint.constant = _image.size.width * initialScale;
+            _imageViewHeightConstraint.constant = height;
+            
+        }
+        _scrollView.minimumZoomScale = [self minZoomScale];
+        _scrollView.maximumZoomScale = 5.0;
+        _scrollView.contentSize = _imageView.frame.size;
+        _scrollView.delegate = self;
     }
     
-    _scrollView.minimumZoomScale = [self minZoomScale];
-    _scrollView.maximumZoomScale = 5.0;
-    _scrollView.contentSize = _imageView.frame.size;
-    _scrollView.delegate = self;
+    
+    
     
 }
 
@@ -194,7 +217,12 @@ static NSString * const _Nonnull FrameworkBundleId = @"org.cocoapods.IGImageCrop
 }
 - (IBAction)chooseButtonAction:(id)sender {
     
-   UIImage *croppedImage = [self cropImage];
+    UIImage *croppedImage = self.image;
+
+    if(!_isGif) {
+        croppedImage = [self cropImage];
+    }
+    
     [self.delegate cropViewController:self didCropToImage:croppedImage withRect:CGRectMake(0, 0, croppedImage.size.width, croppedImage.size.height)];
 }
 
